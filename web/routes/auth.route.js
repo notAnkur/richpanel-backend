@@ -9,7 +9,7 @@ const { verifyToken } = require("../utils/verifyToken");
 passport.use(new Strategy({
   clientID: process.env.FACEBOOK_CLIENT_ID,
   clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-  callbackURL: '/auth/facebook/callback',
+  callbackURL: 'https://richpanel-facebook.herokuapp.com/auth/facebook/callback',
   profileFields: ['id', 'photos', 'name', 'displayName', 'gender', 'profileUrl', 'email']
 },
 async (accessToken, refreshToken, profile, cb) => {
