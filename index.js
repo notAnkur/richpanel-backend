@@ -35,5 +35,5 @@ db.connect()
   .then(() => console.log("db connected"));
 
 app.listen(port, () => {
-  console.log(`App is listening on ${port}`);
+  console.log(`App is listening on ${process.env.PORT}`);
 })
