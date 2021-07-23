@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8001;
+const port = process.env.PORT || 8001;
 const passport = require('passport');
 const cors = require('cors');
 const db = require('./web/db/index.js');
@@ -35,5 +35,5 @@ db.connect()
   .then(() => console.log("db connected"));
 
 app.listen(port, () => {
-  console.log(`App is listening on ${process.env.PORT}`);
+  console.log(`App is listening on ${port}`);
 })
